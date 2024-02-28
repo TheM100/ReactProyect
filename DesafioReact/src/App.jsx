@@ -13,7 +13,7 @@ function App() {
       {/* <Register /> */}
       {/* <Principal /> */}
       {/* <Register /> */}
-      {/* <NewPost /> */}
+      <NewPost />
     </>
   )
 }
