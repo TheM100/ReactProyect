@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-blue': 'rgb(59, 73, 223)',
+      },
+    },
     theme: {
       fontWeight: {
         thin: '100',

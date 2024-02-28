@@ -8,7 +8,7 @@ const Register = () =>{
 return(
     <>
     <section className="w-full flex flex-col items-center ">
-        <div className="w-5/12 flex flex-col items-center   pt-6">
+        <div className=" flex flex-col items-center   pt-6">
 
         <div className="w-full  flex flex-col items-center ">
             <a href="">
@@ -18,16 +18,43 @@ return(
             <p className="text-base mt-1 font-sans">DEV Community is a community of 1,287,199 amazing developers</p>
         </div>
         
-        <div className="w-full grid grid-col gap-y-8 mt-6">
-            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-700 flex justify-between font-semibold"><FaApple className="w-6 h-6"/><span className="mr-56">Continue with Apple</span></button>
-            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-700 flex justify-between font-semibold"><TbHexagonLetterF className="w-6 h-6"/><span className="mr-56">Continue with Forem</span></button>
-            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-700 flex justify-between font-semibold"><FaGithub className="w-6 h-6"/><span className="mr-56">Continue with Github</span></button>
-            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-700 flex justify-between font-semibold"><FaTwitter className="w-6 h-6"/><span className="mr-56">Continue with Twitter</span></button>
+        <div className="w-full grid grid-col gap-y-6 mt-6">
+            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-600 flex justify-between font-semibold"><FaApple className="w-6 h-6"/><span className="mr-36">Continue with Apple</span></button>
+            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-600 flex justify-between font-semibold"><TbHexagonLetterF className="w-6 h-6"/><span className="mr-36">Continue with Forem</span></button>
+            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-600 flex justify-between font-semibold"><FaGithub className="w-6 h-6"/><span className="mr-36">Continue with Github</span></button>
+            <button className="w-full p-3 rounded-xl bg-rgb-d4d4d4 border border-zinc-600 flex justify-between font-semibold"><FaTwitter className="w-6 h-6"/><span className="mr-36">Continue with Twitter</span></button>
             <div class="flex items-center">
-                <hr className="flex-grow border-gray-400 border-t-1"/>
-                <div className="mx-4 text-gray-500">OR</div>
-                <hr className="flex-grow border-gray-400 border-t-1"/>
+                <hr className="flex-grow border-gray-300 border-t-1"/>
+                <div className="mx-4 ">OR</div>
+                <hr className="flex-grow border-gray-300 border-t-1"/>
             </div>
+            <form action="">
+                <div className="flex flex-col">
+                    <label className="font-bold" for="email">Email</label>
+                    <input className="border-2 border-gray-300 p-2 rounded-lg" type="email" id="email" name="email" />
+                </div>
+                <div className="flex flex-col mt-2">
+                    <label className="font-bold" for="email">Password</label>
+                    <input className="border-2 border-gray-300 p-2 rounded-lg" type="password" id="password" name="email" />
+                </div>
+                <div className="flex justify-between">
+                    <div className="gap-x-1 mt-1">
+                        <input className="mx-1 border " type="checkbox" id="remember" name="remember"/>
+                        <label className="text-base " for="remember">Remember me</label>
+                    </div>
+                    <a className="text-blue-900 font-normal" href="">Forgot Password?</a>
+                
+                </div>
+                <button className="bg-blue-900 w-full border rounded-lg p-2 text-white font-semibold mt-6">Log in</button>
+                <div className="w-full flex justify-center mt-2">
+                    <p className=" w-2/3 text-center text-sm italic">By signing in, you are agreeing to our privacy policy, terms of use and code of conduct.</p>
+                </div>
+                
+                <hr className="h-px m-6 bg-gray-400"/>
+                <div className="flex justify-center m-2">
+                New to DEV Community? <a className="text-blue-900" href="">Create account.</a>
+                </div>
+            </form>
         </div>
 
         </div>
