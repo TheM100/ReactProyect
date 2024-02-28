@@ -14,7 +14,7 @@ function NewPost() {
 
                 <div className="flex gap-5">
 
-                    <Button text="Edit" />
+                    <Button text="Edit" variant="" />
                     <Button text="Preview" />
                 </div>
             </header>
