@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <>
+    < >
       {/* <Principal /> */}
       <Register />
       {/* <NewPost /> */}
