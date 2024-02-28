@@ -3,9 +3,9 @@ import React from "react";
 function AsideNewPost() {
     return (
         <>
-            <div>
+            <div className="pl-10 w-96">
                 <h4 className="font-bold">Publishing Tips</h4>
-                <ul>
+                <ul className="list-disc">
                     <li>
                         Ensure your post has a cover image set to make the most of the home feed and social media platforms.</li>
                     <li>
