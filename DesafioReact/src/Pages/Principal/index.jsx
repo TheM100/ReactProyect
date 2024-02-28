@@ -9,7 +9,9 @@ function Principal() {
     return (
         <>
             <Header />
-            <Body />
+            <div className="bg-[#F5F5F5]">
+                <Body />
+            </div>
         </>
     )
 }
