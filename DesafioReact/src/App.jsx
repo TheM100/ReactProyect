@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Register from './Pages/UserRegister'
+import Principal from './Pages/Principal'
+import NewPost from './Pages/NewPost'
+
 //import './App.css'
 
 function App() {
-  
+
 
   return (
     <>
-      <h1>Desafio</h1>
+      {/* <Principal /> */}
+      {/* <Register /> */}
+      <NewPost />
     </>
   )
 }
