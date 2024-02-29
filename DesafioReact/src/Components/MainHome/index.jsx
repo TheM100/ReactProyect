@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { get } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { getPosts } from '../../api/postsApi'
 
 export default function MainHome() {
+
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const postsData = await getPosts()
+            console.log('Posts:', postsData)
+            setPosts(postsData)
+        }
+        fetchPosts()
+    }, [])
+
+    // console.log('PostsState:', posts);
+
     return (
         <main className="text-black">
             <header>
