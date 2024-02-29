@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { React, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -10,13 +11,14 @@ function App() {
 
 
   return (
-    <>
-      {/* <Register /> */}
-      {/* <Principal /> */}
-      {/* <Register /> */}
-      {/* <NewPost /> */}
-      {<PostDetail/>}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Principal />} />
+        <Route path="/login" element={<Register />} />
+        <Route path="/newpost" element={<NewPost />} />
+        {/* <Route path="/post-detail/:id" element={} /> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
