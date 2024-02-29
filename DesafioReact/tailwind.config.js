@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      height: {
+        '10p': '10%',
+      },
       colors: {
         'custom-blue': 'rgb(59, 73, 223)',
       },
