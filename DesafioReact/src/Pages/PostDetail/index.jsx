@@ -5,7 +5,7 @@ const PostDetail = ()=>{
     return(
         <>
         <Header />
-        <section className="w-full h-screen flex overflow-hidden ">
+        <section className="w-full h-screen flex  overflow-y-auto">
             <aside className="w-2/12 h-screen bg-neutral-100 fixed flex flex-col">
                 <div className="w-1/3 h-1/2  absolute left-40 top-24 flex flex-col justify-around  mt-4"> 
                 
@@ -66,22 +66,62 @@ const PostDetail = ()=>{
             </div>
                 
             </aside>
-            <div className="w-7/12 h-screen bg-green-400 flex flex-col justify-center items-center gap-2 ml-[16.666667%] ">
-               <div className="w-2/3 h-2/4 bg-blue-700">
-                <h1>Post1</h1>
-               </div>
-               <div className="w-2/3 h-2/4 bg-blue-700">
-               <h1>Post2</h1>
-               </div>
-               
-              
-            </div>
-            <aside className="w-3/12 h-screen bg-white">
-                    <div className="w-5/6  border rounded-lg relative mx-6 flex flex-col items-center">
+        <div className="w-7/12 h-screen bg-neutral-100 flex flex-col  ml-[16.666667%] ">
+            <div className="w-full mt-5   border rounded-t-3xl">
+                <div className="w-full border rounded-t-3xl">
+                    <img className="object-cover border rounded-t-3xl" src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr9c933347t7shbh8x2ik.gif" alt=""/>
+                </div>
+                <div className=" mt-5">
+                    <div className="w-2/3  ml-20">
+                        <div className=" w-2/3 flex">
+                            <div className="w-2/12 border rounded-full">
+                                <img  className="object-cover border rounded-full" src="https://res.cloudinary.com/practicaldev/image/fetch/s--uow_1noY--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/551686/f0514090-260b-4a34-89b0-a2b6e922d5ec.jpg"
+                                alt=""/>
+                            </div>
+                            <div className="mt-4">
+                                <h4 className="font-bold text-lg">Mateusz Charytoniuk</h4>
+                                <h5>Nov 16</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col my-4">
+                        <span className="w-5/12  flex justify-around ml-20">
+                            <span class="1"><img
+                                    src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg"
+                                     width="35" height="35"/></span>
+                            <span class="2"><img
+                                    src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg"
+                                    width="35" height="35"/></span>
+                            <span class="3"><img
+                                    src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg"
+                                    width="35" height="35"/></span>
+                            <span class="4"><img
+                                    src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg"
+                                     width="35" height="35"/></span>
+                            <span class="5"><img
+                                    src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg"
+                                    width="35" height="35"/></span>
+                         </span>
+
+                </div>
+                <h2 className="ml-20 font-bold text-6xl"><a href="">Release Radar • February 2024 Edition</a></h2>
+                <div className=" w-1/2 ml-20 flex justify-around font-semibold text-ms my-5">
+                    <a href="" class="a1">#programming</a>
+                    <a href="" class="a2">#beginners</a>
+                    <a href="" class="a3">#career</a>
+                    <a href="" class="a4">#productivity</a>
+                </div>
+                    
+            </div>      
+        </div>
+            <aside className="w-3/12 h-screen bg-neutral-100 ">
+                    <div className="w-5/6 mt-5 border rounded-lg relative mx-6 flex flex-col items-center">
                         <div className="w-full h-10p bg-slate-950 rounded-t-lg relative">---</div>
                         <div className="w-full flex  absolute top-3">
                             <div className="w-2/12 ml-4 h-12 border rounded-lg ">
-                                <img className="object-f border rounded-lg" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F7820%2F596b761b-7301-45c4-b0c0-e7136d9f850f.png" alt="" />
+                                <img className="object-f border rounded-lg" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F2575%2F3da37f64-b46e-4fa5-bf86-01b63ba5f57b.png" alt="" />
                             </div>
                             <span className="font-bold text-lg text-neutral-600 my-5 mx-2 ">
                             CopilotKit  
