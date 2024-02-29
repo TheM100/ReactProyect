@@ -26,7 +26,7 @@ function NewPost() {
                 <AsideNewPost />
             </div>
 
-            <div className="bg-gray-100 flex buttonWrapper gap-5 items-center pl-24 pt-5">
+            {/* <div className="bg-gray-100 flex buttonWrapper gap-5 items-center pl-24 pt-5">
 
                 <Button text="Publish" variant="primary" className="font-bold" />
                 <Button text="Save draft" variant="transparent" />
@@ -34,7 +34,7 @@ function NewPost() {
                     <RiSettingsLine />
                 </a>
                 <Button text="Revert new changes" variant="transparent" />
-            </div>
+            </div> */}
         </>
     )
 }

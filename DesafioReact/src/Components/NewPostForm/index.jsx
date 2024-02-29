@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
 import Button from "../Button";
+import { RiSettingsLine } from "react-icons/ri";
+
 import '@github/markdown-toolbar-element'
 
 function NewPostForm() {
@@ -16,12 +18,14 @@ function NewPostForm() {
 
     return (
         <>
-            <div className="bg-white border border-solid rounded-lg py-10 px-16 h-screen ">
+            <div className="bg-white border border-solid rounded-lg pt-10 px-16 h-screen ">
 
                 <form className='flex flex-col gap-5' onSubmit={handleSubmit((data) => console.log(data))}>
 
 
-                    <Button text='Add cover image' variant="light" className="font-bold border-2 border-zinc-300 w-44" />
+                    <Button text='Add cover image' type="file" variant="light" className="font-bold border-2 border-zinc-300 w-44 " />
+                    {/* <label value='Add cover image' type="file" variant="light" className="font-bold border-2 border-zinc-300 w-44 " />
+                    <input type="file" accept="image/*"  ></input> */}
 
                     <input {...register('postTitle', { required: "Post title is required." })} className="text-5xl font-bold" placeholder="New post title here..." />
                     {/* {errors.postTitle && <p>Post title is required.</p>} */}
@@ -30,7 +34,7 @@ function NewPostForm() {
                     {/* {errors.postTags && <p>Post tags separated by commas.</p>} */}
 
                     {/* Toolbar */}
-                    <div className="crayons-article-form__toolbar bg-gray-100 py-4">
+                    <div className="bg-gray-100 py-4">
                         <div className="editor-toolbar flex items-center gap-4 sticky">
                             <button tabIndex="0" aria-label="Bold"
                                 className="c-btn c-btn--icon-alone crayons-tooltip__activator toolbar-btn mr-1">
@@ -97,19 +101,15 @@ function NewPostForm() {
                     <input {...register('postContent', { required: "Post content is required." })} placeholder="Write your post content here..." />
                     {/* {errors.age && <p>Post content is required.</p>} */}
 
+                    <div className="bg-gray-100 flex buttonWrapper gap-5 items-center pt-5 absolute left-24 bottom-0 w-full ">
 
-
-
-
-
-
-
-
-
-
-
-
-
+                        <Button text="Publish" type="submit" variant="primary" className="font-bold" />
+                        <Button text="Save draft" variant="transparent" />
+                        <a href="">
+                            <RiSettingsLine />
+                        </a>
+                        <Button text="Revert new changes" variant="transparent" />
+                    </div>
 
                 </form>
             </div>
