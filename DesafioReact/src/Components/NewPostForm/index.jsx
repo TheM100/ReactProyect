@@ -5,7 +5,7 @@ import { RiSettingsLine } from "react-icons/ri";
 
 import '@github/markdown-toolbar-element'
 
-function NewPostForm() {
+function NewPostForm({ postNew }) {
 
     const {
         register,
@@ -15,7 +15,7 @@ function NewPostForm() {
     } = useForm();
 
     const sendData = async (data) => {
-        console.log(data);
+        postNew(data);
     }
 
     return (

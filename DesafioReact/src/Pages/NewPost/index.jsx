@@ -3,6 +3,7 @@ import Button from "../../Components/Button";
 import AsideNewPost from "../../Components/AsideNewPost/AsideNewPost";
 import NewPostForm from "../../Components/NewPostForm";
 import { RiSettingsLine } from "react-icons/ri";
+import { postNew } from "../../api/postsApi";
 
 
 function NewPost() {
@@ -22,7 +23,7 @@ function NewPost() {
             </header>
 
             <div className="flex justify-between bg-gray-100 pl-24 overflow-y-auto">
-                <NewPostForm />
+                <NewPostForm postNew={(data) => postNew(data)} />
                 <AsideNewPost />
             </div>
 
