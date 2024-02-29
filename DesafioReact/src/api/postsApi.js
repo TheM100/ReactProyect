@@ -7,4 +7,3 @@ export const getPosts = async () => {
     // console.log('Posts:', data.data);
     return posts;
 };
-
