@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import Principal from './Pages/Principal'
 import NewPost from './Pages/NewPost'
 import Register from './Pages/UserRegister/index'
+import PostDetail from './Pages/PostDetail'
 
 function App() {
 
