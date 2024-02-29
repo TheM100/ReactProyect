@@ -6,7 +6,7 @@ function Header() {
 
     return (
 
-        <header className="bg-green-500 flex items-center gap-5 justify-between">
+        <header className=" flex items-center gap-5 justify-between ">
             <div className="flex">
 
                 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="" />
@@ -15,8 +15,8 @@ function Header() {
 
             <div className="flex gap-5">
 
-                <Button text="Log in" />
-                <Button text="Create account" />
+                <Button text="Log in" variant="transparent" className='text-gray-600' />
+                <Button text="Create account" variant='secondary' />
             </div>
         </header>
     )

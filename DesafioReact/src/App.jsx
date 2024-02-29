@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       {/* <Register /> */}
-      {/* <Principal /> */}
+      <Principal />
       {/* <Register /> */}
       {/* <NewPost /> */}
       {<PostDetail/>}

@@ -8,8 +8,10 @@ function NewPostForm() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isSubmitting },
+        reset
     } = useForm();
+
 
 
     return (
@@ -17,13 +19,15 @@ function NewPostForm() {
             <div className="bg-white border border-solid rounded-lg py-10 px-16 h-screen ">
 
                 <form className='flex flex-col gap-5' onSubmit={handleSubmit((data) => console.log(data))}>
-                    <Button text='Add cover image' variant="transparent" className="font-bold border-2 border-zinc-300 w-44" />
 
-                    <input {...register('postTitle', { required: true })} className="text-5xl font-bold" placeholder="New post title here..." />
-                    {errors.lastName && <p>Post title is required.</p>}
+
+                    <Button text='Add cover image' variant="light" className="font-bold border-2 border-zinc-300 w-44" />
+
+                    <input {...register('postTitle', { required: "Post title is required." })} className="text-5xl font-bold" placeholder="New post title here..." />
+                    {/* {errors.postTitle && <p>Post title is required.</p>} */}
 
                     <input {...register('postTags')} placeholder="Add up to 4 tgs..." />
-                    {/* {errors.lastName && <p>Post title is required.</p>} */}
+                    {/* {errors.postTags && <p>Post tags separated by commas.</p>} */}
 
                     {/* Toolbar */}
                     <div className="crayons-article-form__toolbar bg-gray-100 py-4">
@@ -90,8 +94,8 @@ function NewPostForm() {
                         </div>
                     </div>
 
-                    <input {...register('postContent', { required: true })} placeholder="Write your post content here..." />
-                    {errors.age && <p>Post content is required.</p>}
+                    <input {...register('postContent', { required: "Post content is required." })} placeholder="Write your post content here..." />
+                    {/* {errors.age && <p>Post content is required.</p>} */}
 
 
 
