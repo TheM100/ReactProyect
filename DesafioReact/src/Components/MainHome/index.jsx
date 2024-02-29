@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function MainHome() {
     return (
@@ -8,15 +8,15 @@ export default function MainHome() {
                 <nav className="text-black items-start h-15">
                     <ul className="flex flex-row text-lg">
                         <li className="hover:bg-white/50 hover:text-blue-700 p-3">
-                            {/* <Link to="#" className="font-bold">
+                            <Link to="#" className="font-bold">
                                 Relevant
-                            </Link> */}
+                            </Link>
                         </li>
                         <li className="hover:bg-white/50 hover:text-blue-700 p-3">
-                            {/* <Link to="https://dev.to/latest">Latest</Link> */}
+                            <Link to="https://dev.to/latest">Latest</Link>
                         </li>
                         <li className="hover:bg-white/50 hover:text-blue-700 p-3">
-                            {/* <Link to="https://dev.to/top/week">Top</Link> */}
+                            <Link to="https://dev.to/top/week">Top</Link>
                         </li>
                     </ul>
                 </nav>
@@ -51,7 +51,7 @@ export default function MainHome() {
                             How to Make Your Awesome Github Profile
                         </h2>
                         <div className="flex flex-wrap">
-                            {/* <Link to="#" className="p-2 rounded-md hover:bg-gray-300/30">
+                            <Link to="#" className="p-2 rounded-md hover:bg-gray-300/30">
                                 <span>#</span> github
                             </Link>
                             <Link to="#" className="p-2 rounded-md hover:bg-blue-300/30">
@@ -62,7 +62,7 @@ export default function MainHome() {
                             </Link>
                             <Link to="#" className="p-2 rounded-md hover:bg-yellow-300/30">
                                 <span className="text-yellow-300">#</span> tutorial
-                            </Link> */}
+                            </Link>
                         </div>
                         <div className="flex flex-row items-center justify-between">
                             <div className="flex flex-row gap-2 items-center mt-3 mb-3">
