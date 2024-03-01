@@ -8,7 +8,7 @@ export default function PostCard({ postData }) {
 
     return (
         // Link
-        <Link to={`/post-detail/${postData._id}`} className="bg-white rounded-md mb-5 cursor-pointer hover:border-zinc-500/50 border-solid border-[1px] ">
+        <Link to={`/postDetail/${postData._id}`} className="bg-white rounded-md mb-5 cursor-pointer hover:border-zinc-500/50 border-solid border-[1px] ">
 
             <article
                 className="bg-white"
