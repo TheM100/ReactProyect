@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Principal />} />
         <Route path="/login" element={<Register />} />
         <Route path="/newpost" element={<NewPost />} />
-        {/* <Route path="/post-detail/:id" element={<h1>POST detail</h1>} /> */}
+        <Route path='/postDetail' element={<PostDetail/>}/>
       </Routes>
     </BrowserRouter>
   )
