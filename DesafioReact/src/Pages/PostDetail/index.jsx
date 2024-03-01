@@ -1,11 +1,27 @@
+import { useEffect } from "react"
 import CardUser from "../../Components/CardUser"
 import Header from "../../Components/Header"
 import Post from "../../Components/Post"
 import Reactions from "../../Components/Reactions"
+import { useParams } from "react-router-dom"
+import { getPostById } from "../../api/postsApi"
 
 
 
 const PostDetail = ()=>{
+
+    const params = useParams();
+    console.log("Parametros URL: ",params)
+
+    useEffect( ()=>{
+        async function GetPostId() {
+            const postExtractById = await getPostById(params.id)
+            console.log(postExtractById)
+        }
+        GetPostId()
+    },[])
+
+
     return(
         <>
         <Header />
