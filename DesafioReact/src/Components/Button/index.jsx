@@ -1,8 +1,9 @@
 import classNames from "classnames";
 import React from "react";
+import { Link } from "react-router-dom";
 
 
-function Button({ text, variant, className }) {
+function Button({ text, variant, className, to }) {
 
     const buttonClassNames = classNames(
         "text-inherit border rounded-lg py-2 px-4",
@@ -18,7 +19,8 @@ function Button({ text, variant, className }) {
 
     return (
 
-        <button className={buttonClassNames}>{text}</button>
+        // <Link className={buttonClassNames} to={to}>{text}</Link>
+        <button className={buttonClassNames} >{text}</button>
     )
 }
 
