@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import Principal from './Pages/Principal'
 import NewPost from './Pages/NewPost'
 import Register from './Pages/UserRegister/index'
+import PostDetail from './Pages/PostDetail'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Principal />} />
         <Route path="/login" element={<Register />} />
         <Route path="/newpost" element={<NewPost />} />
-        {/* <Route path="/post-detail/:id" element={} /> */}
+        <Route path='/postDetail/:id' element={<PostDetail/>}/>
       </Routes>
     </BrowserRouter>
   )

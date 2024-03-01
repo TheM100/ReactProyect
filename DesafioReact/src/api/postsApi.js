@@ -19,4 +19,13 @@ const postNew = async (data) => {
   });
 };
 
-export { getPosts, postNew };
+const getPostById = async (id) => {
+  //const { id } = req.params; //esto extrae el id del url
+  const response = await fetch(`${MONGO_URL}/${id}`);
+  const data = await response.json();
+  const posts = data.data;
+  console.log("PostsId:", data.data);
+  return posts;
+};
+
+export { getPosts, postNew, getPostById };

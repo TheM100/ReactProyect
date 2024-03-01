@@ -19,7 +19,7 @@ function NewPostForm({ postNew, setPostTips }) {
     const sendData = async (data) => {
         console.log(data)
         await postNew(data);
-        //navigate('/')
+        navigate('/')
     }
 
 
