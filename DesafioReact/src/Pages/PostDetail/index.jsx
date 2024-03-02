@@ -14,10 +14,16 @@ const PostDetail = ()=>{
    
 
     const params = useParams();
-    //console.log("Parametros URL: ",params)
+
     const[PostData, setPostData] = useState({})
-    const[User,SetUser]= useState({})
-    //console.log(PostData.username)
+    const[Users,SetUser]= useState([])
+    const[userInfo,setUserinfo] = useState({})
+    const userPost = PostData.username
+    const profile = userInfo.profilePicture
+    // console.log(userPost)
+    // console.log(Users)
+    console.log(userInfo)
+    
     
 
     useEffect( ()=>{
@@ -31,11 +37,28 @@ const PostDetail = ()=>{
             console.log(usersBD)
             SetUser(usersBD)
         }
+        
        
         GetPostId()
         GetUser()
+        
       
     },[])
+
+    useEffect(()=>{
+        function buscarPorUsername(username, objetos) {
+            for (let clave in objetos) {
+                if (objetos.hasOwnProperty(clave)) {
+                    if (objetos[clave].username === username) {
+                        setUserinfo(objetos[clave]);
+                        // console.log(objetos[clave]);
+                    }
+                }
+            }
+            return null; // Retorna null si no se encuentra el usuario
+        }
+        buscarPorUsername(userPost,Users)
+    },[PostData])
     
 
 
@@ -47,10 +70,10 @@ const PostDetail = ()=>{
                 <Reactions/>
             </aside>
             <div className="w-7/12  bg-neutral-100 flex flex-col  ml-[16.666667%] ">
-                <Post postInfo = {PostData}/>  
+                <Post postInfo = {PostData} profile={profile} />  
             </div>
             <aside className="w-3/12 h-screen bg-neutral-100 ">
-                <CardUser/>
+                <CardUser userToCard={userInfo}/>
             </aside>
         </section>
         

@@ -18,7 +18,7 @@ const {postImage, username, title, hashtags} = props.postInfo;
                     <div className="w-2/3  ml-20">
                         <div className=" w-2/3 flex">
                             <div className="w-2/12 border rounded-full">
-                                <img  className="object-cover border rounded-full" src="https://res.cloudinary.com/practicaldev/image/fetch/s--uow_1noY--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/551686/f0514090-260b-4a34-89b0-a2b6e922d5ec.jpg"
+                                <img  className="object-cover border rounded-full" src={props.profile}
                                 alt=""/>
                             </div>
                             <div className="mt-4">

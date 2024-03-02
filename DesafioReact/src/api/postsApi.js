@@ -16,7 +16,7 @@ export const getPosts = async () => {
     const response = await fetch(`${MONGO_URL}/${id}`);
     const data = await response.json();
     const posts = data.data;
-     console.log('PostsId:', data.data);
+    //  console.log('PostsId:', data.data);
     return posts;
   }
 
@@ -25,6 +25,6 @@ export const getPosts = async () => {
     const response = await fetch(`${MONGO_URL_USERS}`);
     const data = await response.json();
     const posts = data.data;
-     console.log('UsersInfo: ', data.data);
+    //  console.log('UsersInfo: ', data.data);
     return posts;
   }
