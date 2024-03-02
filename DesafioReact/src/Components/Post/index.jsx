@@ -1,22 +1,29 @@
+
 import Tags from "../Tags"
 
 
-const Post = () =>{
+const Post =  (props) =>{
+ 
+const {postImage, username, title, hashtags} = props.postInfo;
+// console.log(hashtags)
+
+    
     return (
         <>
         <div className="w-full mt-5   border rounded-t-3xl">
-                <div className="w-full h-auto border rounded-t-3xl">
-                    <img className="object-cover border rounded-t-3xl" src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr9c933347t7shbh8x2ik.gif" alt=""/>
-                </div>
+            <div className="w-full h-auto border rounded-t-3xl">
+                    <img className="object-cover border rounded-t-3xl" src={postImage} alt=""/>
+            </div>
                 <div className=" mt-5">
                     <div className="w-2/3  ml-20">
                         <div className=" w-2/3 flex">
                             <div className="w-2/12 border rounded-full">
-                                <img  className="object-cover border rounded-full" src="https://res.cloudinary.com/practicaldev/image/fetch/s--uow_1noY--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/551686/f0514090-260b-4a34-89b0-a2b6e922d5ec.jpg"
+                                <img  className="object-cover border rounded-full" src={props.profile}
                                 alt=""/>
                             </div>
                             <div className="mt-4">
-                                <h4 className="font-bold text-lg">Mateusz Charytoniuk</h4>
+                               
+                                <h4 className="font-bold text-lg">{username}</h4>
                                 <h5>Nov 16</h5>
                             </div>
 
@@ -43,16 +50,16 @@ const Post = () =>{
                     </span>
 
                 </div>
-                <h2 className="ml-20 font-bold text-6xl"><a href="">Release Radar • February 2024 Edition</a></h2>
+
+                <h2 className="ml-20 font-bold text-6xl"><a href="">{title}</a></h2>
+
                 <div className=" w-1/2 ml-20 flex justify-around font-semibold text-ms my-5">
-                   <Tags/>
-                   <Tags/>
-                   <Tags/>
-                   <Tags/>
-                   <Tags/>
+                    {hashtags && hashtags.map((tag , index) =>(
+                        <Tags key={index} tagName = {tag}/>
+                    ))}  
                 </div>
                     
-            </div> 
+        </div> 
         </>
     )
 }
