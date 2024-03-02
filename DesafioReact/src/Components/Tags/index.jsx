@@ -1,9 +1,10 @@
 
 
-const Tags = () =>{
+const Tags = (props) =>{
+    const Tag = props.tagName
     return(
         <>
-         <a href="" class="a1">#Tags</a>
+         <a href="" class="a1">{Tag}</a>
         </>
     )
 }
