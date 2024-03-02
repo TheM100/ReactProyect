@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-function Button({ text, variant, className, to }) {
+function Button({ text, variant, className, onClick }) {
 
     const buttonClassNames = classNames(
         "text-inherit border rounded-lg py-2 px-4",
@@ -20,7 +20,7 @@ function Button({ text, variant, className, to }) {
     return (
 
         // <Link className={buttonClassNames} to={to}>{text}</Link>
-        <button className={buttonClassNames} >{text}</button>
+        <button className={buttonClassNames} onClick={onClick}>{text} </button>
     )
 }
 

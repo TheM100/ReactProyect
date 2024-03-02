@@ -19,7 +19,7 @@ function Header() {
             </div>
 
             <div className="flex gap-5">
-                <Button text="Log in" variant="transparent" className="text-gray-600" />
+                <Button text="Log in" variant="transparent" className="text-gray-600" onClick={() => { navigate("/login") }} />
                 <Button text="Create account" variant="secondary" />
             </div>
         </header>
