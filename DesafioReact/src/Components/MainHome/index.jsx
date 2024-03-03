@@ -4,9 +4,18 @@ import { Link } from 'react-router-dom'
 import { getPosts } from '../../api/postsApi'
 import PostCard from '../PostCard'
 
-export default function MainHome() {
-
+export default function MainHome(props) {
     const [posts, setPosts] = useState([])
+    const[postTitleToSearch,setpostTitleToSearch] = useState("")
+
+     useEffect(() => {
+        setpostTitleToSearch(props.postTitleB);
+    }, [props.postTitleB]);
+
+
+   
+    // const[postSearch,setPostSearch] = useState("")
+    // setPostSearch(props.postSearch)
 
     useEffect(() => {
         const fetchPosts = async () => {

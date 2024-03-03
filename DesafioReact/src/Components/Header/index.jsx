@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Button from "../Button";
 import SearchBar from "../SearchBar";
 import { useNavigate } from "react-router-dom";
 
-function Header() {
+function Header(props) {
     const navigate = useNavigate();
+    const[textHeader,setTextHeader]=useState("")
+
+    function getText(text){
+        setTextHeader(text)
+    }
+    useEffect(() => {
+        props.extractText(textHeader);
+      }, [textHeader, props.extractText]);
 
     return (
         <header className=" flex items-center gap-5 justify-between p-1 border-b border-gray-300">
@@ -15,7 +23,7 @@ function Header() {
                     className="w-13 h-10 cursor-pointer"
                     onClick={() => { navigate("/"); }}
                 />
-                <SearchBar />
+                <SearchBar extractText={getText}/>
             </div>
 
             <div className="flex gap-5">
