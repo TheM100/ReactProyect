@@ -19,7 +19,7 @@ const CardUser = (props) =>{
                             </span>
                         </div>
 
-                            <button className="bg-blue-500 w-5/6 p-2 mt-16  border rounded-lg text-md text-white font-semibold">Follow</button>
+                            <button className="bg-blue-600 w-5/6 p-2 mt-16  border rounded-lg text-md text-white font-semibold hover:bg-blue-700">Follow</button>
                             <p className="mt-5 text-center">{bio}</p>
                    
                         <div className=" w-full flex flex-col mt-3   items-start">
