@@ -21,10 +21,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={isLoggedIn ? <Principal /> : <Navigate to="/login" />} />
-        <Route path="/login" element={<Register />} />
+        <Route path="/" element={<Principal />} />
+        <Route path="/login" element={isLoggedIn ? <Navigate to="/" /> : <Register />} />
         <Route path="/newpost" element={isLoggedIn ? <NewPost /> : <Navigate to="/login" />} />
-        <Route path='/postDetail/:id' element={isLoggedIn ? <PostDetail /> : <Navigate to="/login" />} />
+        <Route path='/postDetail/:id' element={<PostDetail />} />
       </Routes>
     </BrowserRouter>
   );
