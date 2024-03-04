@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import { NavigationLinks } from "./NavigationLinks";
 import { DevJoinAdd } from "./DevJoinAdd";
+
+import { SocialNetworkIcons } from "./SocialNetworks";
+import { DarkModeAdd } from "./DarkModeAdd";
+import { BadgePageAdd } from "./BadgePageAdd";
+import { Footer } from "./Footer";
+import { RiSettingsLine } from "react-icons/ri";
+
+
+
 export default function AsideLeftHome() {
     return (
         <aside className="text-black">
@@ -24,6 +33,34 @@ export default function AsideLeftHome() {
                     <NavigationLinks src="https://img.icons8.com/emoji/48/thinking-face.png" text="Software comparisons" />
                 </ul>
             </nav>
+            <nav className="my-4">
+                <h2 className="font-bold pl-3 pb-2">Other</h2>
+                <ul className="cursor-pointer">
+                    <NavigationLinks src="https://img.icons8.com/color/48/home--v1.png" text="Code of Conduct" />
+                    <NavigationLinks src="https://img.icons8.com/avantgarde/100/overview-pages-3.png" text="Privacy Policy" />
+                    <NavigationLinks src="https://img.icons8.com/fluency/48/microphone.png" text="Terms of use" />
+
+                </ul>
+            </nav>
+
+            <SocialNetworkIcons />
+            {!localStorage.getItem("token") &&
+                <div className="flex items-center justify-between">
+                    <h4 className="font-bold pl-4 py-4">My Tags</h4>
+                    <RiSettingsLine className="pr-2 h-8 w-8" />
+                </div>
+            }
+            {!localStorage.getItem("token") &&
+
+                <DarkModeAdd />
+            }
+            {localStorage.getItem("token") &&
+
+                <BadgePageAdd />
+            }
+            <Footer />
         </aside>
+
+
     )
 }
