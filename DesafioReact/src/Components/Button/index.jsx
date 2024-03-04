@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Button({ text, variant, className, onClick }) {
 
     const buttonClassNames = classNames(
-        "text-inherit border rounded-lg py-2 px-4",
+        "border rounded-lg py-2 px-4",
         {
             "bg-white text-gray-500": variant === "default",
             "bg-indigo-700 text-white": variant === "primary",
