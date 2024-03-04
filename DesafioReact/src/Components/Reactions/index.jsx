@@ -5,8 +5,8 @@ const Reactions = () =>{
         <div className="w-1/3 h-1/2  absolute left-40 top-24 flex flex-col justify-around  mt-4"> 
                 
                 <button className="flex flex-col items-center ">
-                    <span  className="flex items-center justify-center">
-                        <svg className="hover:bg-red-500 border rounded-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <span  className="flex items-center justify-center hover:bg-red-500 border rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             role="img" aria-hidden="true" class="crayons-icon">
                             <g clip-path="url(#clip0_988_3276)">
                                 <path
@@ -21,8 +21,8 @@ const Reactions = () =>{
                     </span>
                 </button>
                 <button className="flex flex-col items-center">
-                    <span className="flex items-center justify-center ">
-                        <svg className="hover:bg-yellow-500 border rounded-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    <span className="flex items-center justify-center hover:bg-yellow-500 border rounded-full ">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
                             <path
                                 d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z">
@@ -34,8 +34,8 @@ const Reactions = () =>{
                     </span>
                 </button>
                 <button className="flex flex-col items-center">
-                    <span id="iconShare" class="flex items-center justify-center">
-                        <svg className="hover:bg-blue-700 border rounded-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                    <span id="iconShare" class="flex items-center justify-center hover:bg-blue-600 border rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
                             aria-hidden="true" class="crayons-icon">
                             <path
                                 d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z">
@@ -47,8 +47,8 @@ const Reactions = () =>{
                     </span>
                 </button>
                 <button id="more" className="flex flex-col items-center">
-                    <span className="flex items-center justify-center">
-                        <svg className="hover:bg-gray-400 border rounded-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img"
+                    <span className="flex items-center justify-center hover:bg-gray-500 border rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img"
                             aria-labelledby="asrz593fzt7w9qvysd5jtqol4f7q1t3u" aria-hidden="true"
                             class="crayons-icon dropdown-icon">
                             <title id="asrz593fzt7w9qvysd5jtqol4f7q1t3u">More...</title>
