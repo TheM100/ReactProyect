@@ -22,7 +22,7 @@ const Register = () => {
     const onSubmit = handleSubmit(async (data) => {
         console.log('Data:', data);
         await login(data);
-        // navigate("/");
+        navigate("/");
     });
 
     return (
@@ -30,7 +30,7 @@ const Register = () => {
             <section className="w-full flex flex-col items-center ">
                 <div className=" flex flex-col items-center   pt-6">
                     <div className="w-full  flex flex-col items-center ">
-                        <a href="">
+                        <a href="" onClick={() => { navigate("/") }}>
                             <img
                                 className="w-auto h-12"
                                 src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/original_logo_0DliJcfsTcciZen38gX9.png"
