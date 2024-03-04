@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import SearchBar from "../SearchBar";
 import { useNavigate } from "react-router-dom";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 function Header() {
     const navigate = useNavigate();
@@ -19,8 +20,23 @@ function Header() {
             </div>
 
             <div className="flex gap-5">
-                <Button text="Log in" variant="transparent" className="text-gray-600" onClick={() => { navigate("/login") }} />
-                <Button text="Create account" variant="secondary" />
+                {!localStorage.getItem("token") &&
+                    <>
+                        <Button text="Log in" variant="transparent" className="text-gray-600" onClick={() => { navigate("/login") }} />
+                        <Button text="Create account" variant="secondary" />
+                    </>
+                }
+                {localStorage.getItem("token") &&
+                    <>
+                        <div className="flex items-center gap-3 pr-4">
+
+                            <Button text="Create Post" variant="secondary" className="text-gray-600" onClick={() => { navigate("/newPost") }} />
+                            <IoMdNotificationsOutline className="w-8 h-auto" />
+                            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--80Xs8zXP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1067852/9c972a7a-5c3e-4663-ad30-21fe9b9b0c62.jpeg" className="w-8 h-8 rounded-full object-cover" />
+                        </div>
+
+                    </>
+                }
             </div>
         </header>
     );
