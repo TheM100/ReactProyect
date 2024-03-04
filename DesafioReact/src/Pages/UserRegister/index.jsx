@@ -22,7 +22,7 @@ const Register = () => {
     const onSubmit = handleSubmit(async (data) => {
         console.log('Data:', data);
         await login(data);
-        // navigate("/");
+        navigate("/");
     });
 
     return (
