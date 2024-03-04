@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { get } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { getPosts } from '../../api/postsApi'
 import PostCard from '../PostCard'

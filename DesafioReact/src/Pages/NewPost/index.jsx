@@ -5,6 +5,7 @@ import NewPostForm from "../../Components/NewPostForm";
 import { useState } from "react";
 import { RiSettingsLine } from "react-icons/ri";
 import { postNew } from "../../api/postsApi";
+import { Link } from "react-router-dom";
 
 
 function NewPost() {
@@ -16,7 +17,9 @@ function NewPost() {
         <>
             <header className=" bg-gray-100 flex items-center justify-between px-5 py-2">
                 <div className="flex items-center">
-                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="" className="h-11" />
+                    <Link to="/">
+                        <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="" className="h-11" />
+                    </Link>
                     <h2 className="font-bold pl-4">Create Post</h2>
                 </div>
 
