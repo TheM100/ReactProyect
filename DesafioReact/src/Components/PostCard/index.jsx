@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function PostCard({ postData }) {
-    console.log('PostData:', postData);
+   // console.log('PostData:', postData);
     const navigate = useNavigate();
 
     return (

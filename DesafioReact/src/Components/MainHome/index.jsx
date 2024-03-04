@@ -6,16 +6,35 @@ import PostCard from '../PostCard'
 
 export default function MainHome(props) {
     const [posts, setPosts] = useState([])
+    //console.log("this is only shit:  ",posts)
     const[postTitleToSearch,setpostTitleToSearch] = useState("")
+    const [filteredPost, setFilteredPost] = useState(null); //mapear este para mostrar
 
      useEffect(() => {
         setpostTitleToSearch(props.postTitleB);
     }, [props.postTitleB]);
 
+    useEffect(()=>{
+        if (!postTitleToSearch) {
+            setFilteredPost(null);
+            console.log('filtro vacio') // Si no hay valor, mostrar todos los trabajos
+            
+        }
+
+        const filtered = posts.filter(post => {
+            //return console.log(post.title)
+            return post.title.toLowerCase().includes(postTitleToSearch.toLowerCase());
+        });
+        setFilteredPost(filtered);
+        console.log(filteredPost)
+
+        
+        
+    },[postTitleToSearch])
+
 
    
-    // const[postSearch,setPostSearch] = useState("")
-    // setPostSearch(props.postSearch)
+
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -57,7 +76,7 @@ export default function MainHome(props) {
             </header>
             {
                 posts.map((post) => {
-                    console.log('Post:', post);
+                    //console.log('Post:', post);
                     return (
                         <PostCard postData={post} key={post._id} />
                     )
