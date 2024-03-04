@@ -5,14 +5,14 @@ import AsideRightHome from "../AsideRightHome";
 
 function Body(props) {
 
-     const[PostTitleSearch,setPostTitleSearch] = useState("")
+    const [PostTitleSearch, setPostTitleSearch] = useState("")
 
-     useEffect(() => {
+    useEffect(() => {
         setPostTitleSearch(props.PostBuscado);
     }, [props.PostBuscado]);
 
-    
-    
+
+
 
     return (
         // <body className="bg-blue-500">

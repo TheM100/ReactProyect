@@ -37,7 +37,7 @@ function NewPostForm({ postNew, setPostTips }) {
                     {/* <label value='Add cover image' type="file" variant="light" className="font-bold border-2 border-zinc-300 w-44 " />
                     <input type="file" accept="image/*"  ></input> */}
 
-                    <input className="hidden" {...register('postImage')} value="https://picsum.photos/200/300" />
+                    <input className="hidden" {...register('postImage')} value="https://picsum.photos/835/351" />
                     <input className="hidden" {...register('username')} value="Gerardo" />
                     <input className="hidden" {...register('profilePicture')} value="https://instagram.fgdl9-1.fna.fbcdn.net/v/t51.2885-19/69361288_364074587856863_787347129755500544_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fgdl9-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=n4hNJvlBTMgAX-0d_mo&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfCx6zEt8wpzg_dtdXcGpd-vevM5ZBClZ4p6HtZ1rva82w&oe=65E5470D&_nc_sid=ee9879" />
                     <input className="hidden" {...register('date')} value={new Date().toISOString()} />
