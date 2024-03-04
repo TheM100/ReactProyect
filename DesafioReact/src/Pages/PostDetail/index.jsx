@@ -1,6 +1,6 @@
 import { useEffect , useState } from "react"
 import CardUser from "../../Components/CardUser"
-import Header from "../../Components/Header"
+import Header2 from "../../Components/Header2"
 import Post from "../../Components/Post"
 import Reactions from "../../Components/Reactions"
 import { useParams } from "react-router-dom"
@@ -64,7 +64,7 @@ const PostDetail = ()=>{
 
     return(
         <>
-        <Header />
+        <Header2 />
         <section className="w-full h-screen flex  overflow-y-auto">
             <aside className="w-2/12 h-screen bg-neutral-100 fixed flex flex-col">
                 <Reactions/>
