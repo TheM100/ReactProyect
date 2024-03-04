@@ -65,7 +65,7 @@ const PostDetail = ()=>{
     return(
         <>
         <Header2 />
-        <section className="w-full h-screen flex  overflow-y-auto">
+        <section className="w-full h-screen flex  overflow-y-auto ">
             <aside className="w-2/12 h-screen bg-neutral-100 fixed flex flex-col">
                 <Reactions/>
             </aside>

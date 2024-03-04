@@ -8,7 +8,7 @@ const CardUser = (props) =>{
 
     return(
         <>
-        <div className="w-5/6 mt-5 border rounded-lg relative mx-6 flex flex-col items-center">
+        <div className="w-5/6 mt-5 border rounded-lg relative mx-6 flex flex-col items-center bg-white">
                         <div className="w-full h-10p bg-slate-950 rounded-t-lg relative">---</div>
                         <div className="w-full flex  absolute top-3">
                             <div className="w-2/12 ml-4 h-12 border rounded-lg ">
