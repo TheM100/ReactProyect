@@ -3,9 +3,43 @@ import { Link } from 'react-router-dom'
 import { getPosts } from '../../api/postsApi'
 import PostCard from '../PostCard'
 
-export default function MainHome() {
-
+export default function MainHome(props) {
     const [posts, setPosts] = useState([])
+    const[postTitleToSearch,setpostTitleToSearch] = useState("")
+    const [filteredPost, setFilteredPost] = useState([]); //mapear este para mostrar
+
+     useEffect(() => {
+        setpostTitleToSearch(props.postTitleB || "");
+    }, [props.postTitleB]);
+
+    useEffect(()=>{
+        if (postTitleToSearch === "") {
+            setFilteredPost([]);
+            console.log('filtro vacio') // Si no hay valor, mostrar todos los trabajos
+            
+        }else{
+            const filtered = posts.filter(post => {
+                //return console.log(post.title)
+                return post.title.toLowerCase().includes(postTitleToSearch.toLowerCase());
+            });
+            setFilteredPost(filtered);  
+            console.log(filteredPost) 
+        }
+               
+        
+    },[postTitleToSearch,posts])
+
+    // useEffect(()=>{
+    //     if(filteredPost.length===0){
+    //         console.log('array de post filtrados VACIO')
+    //     }
+    // },[filteredPost])
+
+    
+
+    
+   
+
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -24,7 +58,7 @@ export default function MainHome() {
         )
     }
 
-    // console.log('PostsState:', posts);
+    
 
     return (
         <main className="text-black">
@@ -45,14 +79,15 @@ export default function MainHome() {
                     </ul>
                 </nav>
             </header>
-            {
-                posts.map((post) => {
-                    console.log('Post:', post);
-                    return (
-                        <PostCard postData={post} key={post._id} />
-                    )
-                })
-            }
+           
+             {filteredPost.length === 0 && postTitleToSearch !== "" && (
+                <div>No se encontraron resultados</div>
+             )}
+            {(filteredPost.length > 0 ? filteredPost : posts).map(post => (
+                <PostCard postData={post} key={post._id} />
+            ))}
+
+
 
         </main>
     )

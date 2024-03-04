@@ -4,17 +4,14 @@ import SearchBar from "../SearchBar";
 import { useNavigate } from "react-router-dom";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
-function Header(props) {
+function Header2(props) {
     const navigate = useNavigate();
     const[textHeader,setTextHeader]=useState("")
 
     function getText(text){
         setTextHeader(text)
     }
-    useEffect(() => {
-        props.extractText(textHeader);
-      }, [textHeader, props.extractText]);
-
+   
     return (
         <header className=" flex items-center gap-5 justify-between p-1 border-b border-gray-300">
             <div className="flex place-items-center gap-5 pl-14 py-1">
@@ -50,4 +47,4 @@ function Header(props) {
     );
 }
 
-export default Header;
+export default Header2;
