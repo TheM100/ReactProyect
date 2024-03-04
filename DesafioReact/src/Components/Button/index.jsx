@@ -12,7 +12,7 @@ function Button({ text, variant, className, onClick }) {
             "bg-indigo-700 text-white": variant === "primary",
             "bg-transparent text-inherit border-transparent": variant === "transparent",
             "bg-transparent text-gray-600 border-gray-300": variant === "light",
-            "bg-transparent text-indigo-600 border-indigo-600 font-bold": variant === "secondary"
+            "bg-transparent text-indigo-500 border-indigo-600 font-bold": variant === "secondary"
         },
         className
     )
