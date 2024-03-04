@@ -1,9 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Button from '../Button';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
-
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
@@ -31,7 +32,7 @@ function LoginForm() {
                     </div>
                     <a href="" className='text-blue-700'>Forgot password?</a>
                 </div>
-                <Button type="submit" value="Log in" />
+                <Button type="submit" value="Log in" onClick={() => { navigate("/") }} />
 
             </form>
 
