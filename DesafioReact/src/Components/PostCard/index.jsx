@@ -11,7 +11,7 @@ export default function PostCard({ postData }) {
         <Link to={`/postDetail/${postData._id}`} className="bg-white rounded-md mb-5 cursor-pointer hover:border-zinc-500/50 ">
 
             <article
-                className="bg-white"
+                className="bg-white rounded-md"
             >
                 <img
                     // src="https://res.cloudinary.com/practicaldev/image/fetch/s--F6jCmbz_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zbyro9f39xdeowboserg.png"

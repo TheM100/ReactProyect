@@ -5,7 +5,7 @@ import { TrendingGuides } from './TrengingGuides'
 
 export default function AsideRightHome() {
     return (
-        <aside className="flex flex-col gap-2">
+        <aside className="flex flex-col gap-2 invisible lg:visible">
             {localStorage.getItem("token") &&
 
 

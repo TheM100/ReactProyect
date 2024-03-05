@@ -40,7 +40,7 @@ function NewPostForm({ postNew, setPostTips }) {
                     <input className="hidden" {...register('postImage')} value="https://picsum.photos/835/351" />
                     <input className="hidden" {...register('username')} value="Gerardo" />
                     <input className="hidden" {...register('profilePicture')} value="https://instagram.fgdl9-1.fna.fbcdn.net/v/t51.2885-19/69361288_364074587856863_787347129755500544_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fgdl9-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=n4hNJvlBTMgAX-0d_mo&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfCx6zEt8wpzg_dtdXcGpd-vevM5ZBClZ4p6HtZ1rva82w&oe=65E5470D&_nc_sid=ee9879" />
-                    <input className="hidden" {...register('date')} value={new Date().toISOString()} />
+                    <input className="hidden" {...register('date')} value={new Date()} />
 
                     <input {...register('title', { required: "Post title is required." })} className="text-5xl font-bold" placeholder="New post title here..." onClick={() => { setPostTips("titleHover") }} />
                     {errors.postTitle && <p>Post title is required.</p>}
