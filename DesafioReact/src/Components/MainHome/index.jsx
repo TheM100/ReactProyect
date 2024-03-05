@@ -14,13 +14,7 @@ export default function MainHome(props) {
     }, [props.postTitleB]);
 
     useEffect(() => {
-        if (postTitleToSearch === "") {
-            setFilteredPost([]);
-            console.log('filtro vacio') // Si no hay valor, mostrar todos los trabajos
-
-        }
-
-        else {
+        if (postTitleToSearch !== "") {
             const filtered = posts.filter(post => {
                 //return console.log(post.title)
                 return post.title.toLowerCase().includes(postTitleToSearch.toLowerCase());
@@ -42,18 +36,20 @@ export default function MainHome(props) {
 
     useEffect(() => {
         const todayTimestamp = new Date();
-
+        console.log(todayTimestamp)
+        //Tue Mar 05 2024 09:27:47 GMT-0600 (hora estándar central)
 
         if (postNavFilter === "Latest") {
             const filtered = posts.filter(post => {
-                const postDate = post.date
+                const postDate = new Date(post.date)
                 console.log(postDate)
-                // console.log(postDate)
-                // console.log(todayDate)
-                //return console.log(post.title)
-                const equal = (postDate === todayTimestamp)
-                console.log(equal)
-                return equal;
+                //2024-03-04T22:30:57.064Z
+                const sameDay = todayTimestamp.getDate() === postDate.getDate() &&
+                    todayTimestamp.getMonth() === postDate.getMonth() &&
+                    todayTimestamp.getFullYear() === postDate.getFullYear()
+
+                console.log(sameDay)
+                return sameDay;
             });
             setFilteredPost(filtered);
             console.log(filteredPost)
@@ -62,12 +58,10 @@ export default function MainHome(props) {
             const filtered = posts.filter(post => post.relevant === true);
             ;
             setFilteredPost(filtered);
-            console.log(filteredPost)
 
         } else if (postNavFilter === "Relevant") {
 
             setFilteredPost([]);
-            console.log(filteredPost)
 
         }
 
