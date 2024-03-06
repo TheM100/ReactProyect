@@ -10,6 +10,7 @@ import { useState } from "react";
 const Register = () => {
 
     // const [isLogged, setIsLogged] = useState(false);
+    const [createAccount, setCreateAccount] = useState(false)
 
     const {
         register,
@@ -22,7 +23,7 @@ const Register = () => {
     const onSubmit = handleSubmit(async (data) => {
         console.log('Data:', data);
         await login(data);
-        navigate("/");
+        //navigate("/");
     });
 
     return (
@@ -65,7 +66,7 @@ const Register = () => {
                             <div className="mx-4 ">OR</div>
                             <hr className="flex-grow border-gray-300 border-t-1" />
                         </div>
-                        <form className="w-full" onSubmit={onSubmit}>
+                        {!createAccount && <form className="w-full" onSubmit={onSubmit}>
                             <div className="flex flex-col">
                                 <label className="font-bold" htmlFor="email">
                                     Email
@@ -125,11 +126,94 @@ const Register = () => {
                             <hr className="h-px m-6 bg-gray-400" />
                             <div className="flex justify-center m-2">
                                 New to DEV Community?{" "}
-                                <a className="text-blue-900" href="">
+                                <span className="text-blue-900" href="" onClick={() => { setCreateAccount(!createAccount) }}>
                                     Create account.
+                                </span>
+                            </div>
+                        </form>}
+                        {createAccount && <form className="w-full" onSubmit={onSubmit}>
+                            <div className="flex flex-col">
+                                <label className="font-bold" htmlFor="email">
+                                    Email
+                                </label>
+                                <input
+                                    className="border-2 border-gray-300 p-2 rounded-lg"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    {...register("email", { required: true })}
+                                />
+                                {errors.email && (
+                                    <p className="text-red-500">Email is required.</p>
+                                )}
+                            </div>
+                            <div className="flex flex-col mt-2">
+                                <label className="font-bold" htmlFor="email">
+                                    Password
+                                </label>
+                                <input
+                                    className="border-2 border-gray-300 p-2 rounded-lg"
+                                    type="password"
+                                    id="password"
+                                    name="email"
+                                    {...register("password", { required: true })}
+                                />
+                                {errors.password && (
+                                    <p className="text-red-500">Password is required.</p>
+                                )}
+                            </div>
+                            <div className="flex flex-col mt-2">
+                                <label className="font-bold" htmlFor="email">
+                                    Confirm Password
+                                </label>
+                                <input
+                                    className="border-2 border-gray-300 p-2 rounded-lg"
+                                    type="password"
+                                    id="passwordMatch"
+                                    name="email"
+                                    {...register("passwordMatch", { required: true })}
+                                />
+                                {errors.passwordMatch && (
+                                    <p className="text-red-500">Password confirmation is required.</p>
+                                )}
+                                {errors.password && errors.passwordMatch && (
+                                    <p className="text-red-500">Passwords must match.</p>
+                                )}
+                            </div>
+                            <div className="flex justify-between">
+                                <div className="gap-x-1 mt-1">
+                                    <input
+                                        className="mx-1 border "
+                                        type="checkbox"
+                                        id="remember"
+                                        name="remember"
+                                    />
+                                    <label className="text-base " htmlFor="remember">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a className="text-blue-900 font-normal" href="">
+                                    Forgot Password?
                                 </a>
                             </div>
-                        </form>
+                            <button className="bg-blue-900 w-full border rounded-lg p-2 text-white font-semibold mt-6">
+                                Log in
+                            </button>
+                            <div className="w-full flex justify-center mt-2">
+                                <p className=" w-2/3 text-center text-sm italic">
+                                    By signing in, you are agreeing to our privacy policy, terms
+                                    of use and code of conduct.
+                                </p>
+                            </div>
+
+                            <hr className="h-px m-6 bg-gray-400" />
+                            <div className="flex justify-center m-2">
+                                New to DEV Community?{" "}
+                                <span className="text-blue-900" href="" onClick={() => { setCreateAccount(!createAccount) }}>
+                                    Log in.
+                                </span>
+                            </div>
+                        </form>}
                     </div>
                 </div>
             </section>
